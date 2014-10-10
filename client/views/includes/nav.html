@@ -1,0 +1,9 @@
+<template name="nav">
+  <header class="navbar">
+    <ul class="nav nav-tabs" role="tablist">
+      <li class="{{ activeIfTemplateIs 'tasksList' }}"><a href="{{pathFor 'tasksList'}}">Home</a></li>
+      <li class="{{ activeIfTemplateIs 'usersList' }}"><a href="{{pathFor 'usersList'}}">Users</a></li>
+      <li class="{{ activeIfTemplateIs 'backlogList' }}"><a href="{{pathFor 'backlogList'}}">Backlog</a></li>
+    </ul>
+  </header>
+</template>
