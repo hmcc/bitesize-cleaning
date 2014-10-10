@@ -1,12 +1,16 @@
 <template name="usersList">
   <div class="houses">
-    {{#each houses}}
-      {{> houseItem}}
-    {{/each}}
+    <ul class="list-group">
+      {{#each houses}}
+        <li class="list-group-item">{{> houseItem}}</li>
+      {{/each}}
+    </ul>
   </div>
   <div class="users">
-    {{#each users}}
-      {{> userItem}}
-    {{/each}}
+    <ul class="list-group">
+      {{#each users}}
+        <li class="list-group-item">{{> userItem}}</li>
+      {{/each}}
+    </ul>
   </div>
 </template>

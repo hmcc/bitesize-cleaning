@@ -1,7 +1,9 @@
 <template name="backlogList">
   <div class="backlog">
-    {{#each backlog}}
-      {{> backlogItem}}
-    {{/each}}
+    <ul class="list-group">
+      {{#each backlog}}
+        <li class="list-group-item">{{> backlogItem}}</li>
+      {{/each}}
+    </ul>
   </div>
 </template>
