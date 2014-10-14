@@ -1,3 +1,5 @@
+accounts-base@1.1.1
+accounts-password@1.0.2
 application-configuration@1.0.2
 autoupdate@1.1.1
 base64@1.0.0
@@ -12,9 +14,11 @@ ctl@1.0.1
 ddp@1.0.9
 deps@1.0.4
 ejson@1.0.3
+email@1.0.3
 fastclick@1.0.0
 follower-livedata@1.0.1
 geojson-utils@1.0.0
+handlebars@1.0.0
 html-tools@1.0.1
 htmljs@1.0.1
 http@1.0.6
@@ -27,6 +31,7 @@ iron:router@0.9.4
 jquery@1.0.0
 json@1.0.0
 livedata@1.0.10
+localstorage@1.0.0
 logging@1.0.3
 meteor-platform@1.1.1
 meteor@1.1.1
@@ -35,6 +40,8 @@ minimongo@1.0.3
 mizzao:bootstrap-3@3.2.0_1
 mobile-status-bar@1.0.0
 mongo@1.0.6
+mrt:accounts-ui-bootstrap-3@0.3.3
+npm-bcrypt@0.7.7
 observe-sequence@1.0.2
 ordered-dict@1.0.0
 random@1.0.0
@@ -44,9 +51,13 @@ reload@1.1.0
 retry@1.0.0
 routepolicy@1.0.1
 sacha:spin@2.0.4
+service-configuration@1.0.1
 session@1.0.2
+sha@1.0.0
 spacebars-compiler@1.0.2
 spacebars@1.0.2
+srp@1.0.0
+stylus@1.0.4
 templating@1.0.7
 tracker@1.0.2
 ui@1.0.3

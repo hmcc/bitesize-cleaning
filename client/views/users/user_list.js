@@ -3,6 +3,6 @@ Template.usersList.helpers({
     return Houses.find();
   },
   users: function() {
-    return Users.find();
+    return Meteor.users.find();
   }
 });

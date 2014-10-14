@@ -7,6 +7,12 @@ Meteor.publish('houses', function() {
 Meteor.publish('tasks', function() {
   return Tasks.find();
 });
-Meteor.publish('users', function() {
-  return Users.find();
+
+Meteor.publish("allUsers", function () {
+  if (this.userId) {
+    return Meteor.users.find();
+  } else {
+    this.ready();
+  }
 });
+

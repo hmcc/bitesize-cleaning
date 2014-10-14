@@ -1,9 +1,24 @@
 <template name="nav">
   <header class="navbar">
-    <ul class="nav nav-tabs" role="tablist">
-      <li class="{{ activeIfTemplateIs 'tasksList' }}"><a href="{{pathFor 'tasksList'}}">Home</a></li>
-      <li class="{{ activeIfTemplateIs 'usersList' }}"><a href="{{pathFor 'usersList'}}">Users</a></li>
-      <li class="{{ activeIfTemplateIs 'backlogList' }}"><a href="{{pathFor 'backlogList'}}">Backlog</a></li>
-    </ul>
+    <div class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav" role="tablist">
+           <li class="{{ activeIfTemplateIs 'tasksList' }}"><a href="{{pathFor 'tasksList'}}">Home</a></li>
+           <li class="{{ activeIfTemplateIs 'usersList' }}"><a href="{{pathFor 'usersList'}}">Users</a></li>
+           <li class="{{ activeIfTemplateIs 'backlogList' }}"><a href="{{pathFor 'backlogList'}}">Backlog</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            {{> loginButtons }} <!-- here -->
+        </ul>
+      </div>
+    </div>
   </header>
 </template>

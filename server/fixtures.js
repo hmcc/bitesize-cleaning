@@ -44,16 +44,3 @@ if (Tasks.find().count() === 0) {
   });
 }
 
-if (Users.find().count() === 0) {
-  Users.insert({
-    name: 'dave',
-    email: 'dave@debacle.co.uk',
-    house_address: '79 Heworth Green',
-  });
-
-  Users.insert({
-    name: 'heather',
-    email: 'heather@recoil.org',
-    house_address: '79 Heworth Green',
-  });
-}
