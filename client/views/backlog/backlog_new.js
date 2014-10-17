@@ -7,7 +7,7 @@ Template.backlogNew.events({
       time: $(e.target).find('[name=time]').val()
     }
 
-    backlog._id = Backlog.insert(backlog);
+    backlog._id = Meteor.call('addToBacklog', backlog);
     Router.go('backlogList');
   }
 });

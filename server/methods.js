@@ -2,8 +2,16 @@ if (Meteor.isServer) {
 
   Meteor.methods({
 
+    addToBacklog: function(backlog) {
+      if (access.isLoggedIn(this.userId)) {
+        return Backlog.insert(backlog);
+      }
+    },
+
     removeBacklogByTitle: function(title) {
-      return Backlog.remove({title: title});
+      if (access.isLoggedIn(this.userId)) {
+        return Backlog.remove({title: title});
+      }
     }
 
   });
