@@ -16,7 +16,12 @@
            <li class="{{ activeIfTemplateIs 'backlogList' }}"><a href="{{pathFor 'backlogList'}}">Backlog</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            {{> loginButtons }} <!-- here -->
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{displayName}} <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="{{pathFor 'login'}}">Log out</a></li>
+              </ul>
+          </li>
         </ul>
       </div>
     </div>
