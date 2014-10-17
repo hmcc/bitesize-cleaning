@@ -18,7 +18,6 @@ email@1.0.3
 fastclick@1.0.0
 follower-livedata@1.0.1
 geojson-utils@1.0.0
-handlebars@1.0.0
 html-tools@1.0.1
 htmljs@1.0.1
 http@1.0.6
@@ -40,7 +39,6 @@ minimongo@1.0.3
 mizzao:bootstrap-3@3.2.0_1
 mobile-status-bar@1.0.0
 mongo@1.0.6
-mrt:accounts-ui-bootstrap-3@0.3.3
 npm-bcrypt@0.7.7
 observe-sequence@1.0.2
 ordered-dict@1.0.0
@@ -57,7 +55,6 @@ sha@1.0.0
 spacebars-compiler@1.0.2
 spacebars@1.0.2
 srp@1.0.0
-stylus@1.0.4
 templating@1.0.7
 tracker@1.0.2
 ui@1.0.3
