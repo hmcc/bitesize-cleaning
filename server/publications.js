@@ -1,15 +1,34 @@
+function isLoggedIn() {
+  if(!this.userId) return null;
+  var user = Meteor.users.findOne(this.userId);
+  if(!user) return null;
+  return true;
+}
+
 Meteor.publish('backlog', function() {
-  return Backlog.find();
+  if (this.userId) {
+    return Backlog.find();
+  } else {
+    this.ready();
+  }
 });
 Meteor.publish('houses', function() {
-  return Houses.find();
+  if (isLoggedIn()) {
+    return Houses.find();
+  } else {
+    this.ready();
+  }
 });
 Meteor.publish('tasks', function() {
-  return Tasks.find();
+  if (isLoggedIn()) {
+    return Tasks.find();
+  } else {
+    this.ready();
+  }
 });
 
 Meteor.publish("allUsers", function () {
-  if (this.userId) {
+  if (isLoggedIn()) {
     return Meteor.users.find();
   } else {
     this.ready();
