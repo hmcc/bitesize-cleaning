@@ -4,7 +4,7 @@ access = ( function() {
     if(!userId) return false;
     var user = Meteor.users.findOne(userId);
     if(!user) return false;
-    return true;
+    return user;
   }
   
   return {

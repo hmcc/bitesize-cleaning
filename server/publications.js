@@ -5,13 +5,6 @@ Meteor.publish('backlog', function() {
     this.ready();
   }
 });
-Meteor.publish('houses', function() {
-  if (access.isLoggedIn(this.userId)) {
-    return Houses.find();
-  } else {
-    this.ready();
-  }
-});
 Meteor.publish('tasks', function() {
   if (access.isLoggedIn(this.userId)) {
     return Tasks.find();
@@ -21,8 +14,9 @@ Meteor.publish('tasks', function() {
 });
 
 Meteor.publish("allUsers", function () {
-  if (access.isLoggedIn(this.userId)) {
-    return Meteor.users.find();
+  var user = access.isLoggedIn(this.userId);
+  if (user) {
+    return Meteor.users.find({address: user.address});
   } else {
     this.ready();
   }

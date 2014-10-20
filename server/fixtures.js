@@ -18,18 +18,6 @@ if (Backlog.find().count() === 0) {
   });
 }
 
-if (Houses.find().count() === 0) {
-  Houses.insert({
-    address: '79 Heworth Green',
-  });
-
-  Tasks.insert({
-    title: 'Clean kitchen sink',
-    time: '5 minutes',
-    user: 'dave'
-  });
-}
-
 if (Tasks.find().count() === 0) {
   Tasks.insert({
     title: 'Hoover downstairs',

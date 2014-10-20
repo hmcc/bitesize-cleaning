@@ -1,9 +1,7 @@
 <template name="usersList">
   <div class="houses">
     <ul class="list-group">
-      {{#each houses}}
-        <li class="list-group-item">{{> houseItem}}</li>
-      {{/each}}
+        <li class="list-group-item">{{currentUser.address}}</li>
     </ul>
   </div>
   <div class="users">

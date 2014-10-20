@@ -8,9 +8,10 @@ Template.login.events({
         if (error) {
           console.log(error);
           Router.go('login');
+        } else {
+          Router.go('backlogList');
         }
       }
     );
-    Router.go('backlogList');
   }
 });
