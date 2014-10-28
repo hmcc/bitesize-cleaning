@@ -4,7 +4,7 @@ Template.signup.events({
 
     var user = {
       username: template.find("#signup-username").value,
-      email:    template.find("#signup-email").value,
+      email: template.find("#signup-email").value,
       password: template.find("#signup-password").value,
       cleaning_time: template.find("#signup-cleaning-time").value,
       profile: {
