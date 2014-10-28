@@ -3,7 +3,6 @@ Template.signup.events({
     event.preventDefault();
 
     var user = {
-      address: template.find("#signup-address").value,
       username: template.find("#signup-username").value,
       email:    template.find("#signup-email").value,
       password: template.find("#signup-password").value,

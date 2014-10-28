@@ -4,7 +4,7 @@ if (Meteor.isServer) {
     if (options.profile)
       user.profile = options.profile;
     user.cleaning_time = options.cleaning_time;
-    user.address = options.address;
+    user.household = options.household || new Meteor.Collection.ObjectID()._str;
     return user;
   });
 
@@ -15,9 +15,9 @@ if (Meteor.isServer) {
         username: userToCreate.username,
         email:    userToCreate.email,
         password: userToCreate.password,
-        address: userToCreate.address,
+        profile: userToCreate.profile,
         cleaning_time: userToCreate.cleaning_time,
-        profile: userToCreate.profile
+        household: userToCreate.household
       },
       callback
       );
