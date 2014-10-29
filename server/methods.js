@@ -10,17 +10,9 @@ if (Meteor.isServer) {
 
   Meteor.methods({
 
-    newUser: function(userToCreate, callback) {
-      return Accounts.createUser({
-        username: userToCreate.username,
-        email:    userToCreate.email,
-        password: userToCreate.password,
-        profile: userToCreate.profile,
-        cleaning_time: userToCreate.cleaning_time,
-        household: userToCreate.household
-      },
-      callback
-      );
+    newUser: function(options, callback) {
+      var userId = Accounts.createUser(options, callback);
+      return userId;
     },
 
     addToBacklog: function(backlog) {

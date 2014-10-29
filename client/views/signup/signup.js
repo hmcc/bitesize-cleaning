@@ -2,7 +2,7 @@ Template.signup.events({
   "submit .form-signup": function(event, template) {
     event.preventDefault();
 
-    var user = {
+    var options = {
       username: template.find("#signup-username").value,
       email: template.find("#signup-email").value,
       password: template.find("#signup-password").value,
@@ -12,7 +12,7 @@ Template.signup.events({
       }
     }
 
-    Meteor.call('newUser', user, function(error) {
+    Meteor.call('newUser', options, function(error) {
       if (error) {
         console.log(error);
         Router.go('signup');
