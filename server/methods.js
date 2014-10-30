@@ -11,7 +11,10 @@ if (Meteor.isServer) {
   Meteor.methods({
 
     newUser: function(options, callback) {
-      var userId = Accounts.createUser(options, callback);
+      var userId = Accounts.createUser(options, callback);     
+      if (!options.password) {
+        Accounts.sendEnrollmentEmail(userId);
+      }
       return userId;
     },
 

@@ -10,8 +10,6 @@ Template.userNew.events({
     Meteor.call('newUser', options, function(error, data) {
       if (error) {
         console.log(error);
-      } else {
-        Accounts.sendEnrollmentEmail(data)
       }
       Router.go('userList');
     });
