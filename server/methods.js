@@ -18,6 +18,17 @@ if (Meteor.isServer) {
       return userId;
     },
 
+    completeUser: function(username, cleaningTime) {
+      if (access.isLoggedIn(this.userId)) {
+        Meteor.users.update(this.userId, 
+          {$set: {
+            'username': username, 
+            'cleaning_time': cleaningTime
+          }}
+        );
+      }
+    },
+
     addToBacklog: function(backlog) {
       if (access.isLoggedIn(this.userId)) {
         return Backlog.insert(backlog);
