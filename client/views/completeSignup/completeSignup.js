@@ -12,6 +12,7 @@ Template.completeSignup.events({
       function(error) {
         if (error) {
           console.log(error);
+          Router.go('tokenExpired');
         } else {
           var user = Meteor.user();
           Meteor.call('completeUser', username, cleaningTime);
