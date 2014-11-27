@@ -18,8 +18,8 @@ Template.signup.events({
         Router.go('signup');
       } else {
         Meteor.loginWithPassword(
-          user.username,
-          user.password,
+          options.username,
+          options.password,
           function(loginError) {
             if (loginError) {
               console.log(loginError);
