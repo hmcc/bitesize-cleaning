@@ -6,7 +6,7 @@ Template.login.events({
       template.find("#login-password").value,
       function(error) {
         if (error) {
-          $(template.find(".error")).removeClass('hidden');
+          errorHandler.showError(template, error);
           Router.go('login');
         } else {
           Router.go('backlogList');

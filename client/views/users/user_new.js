@@ -9,9 +9,7 @@ Template.userNew.events({
 
     Meteor.call('newUser', options, function(error, data) {
       if (error) {
-        var $error = $(template.find(".error"));
-        $error.text(error.reason || $error.text());
-        $error.removeClass('hidden');
+        errorHandler.showError(template, error);
       }
     });
   }
