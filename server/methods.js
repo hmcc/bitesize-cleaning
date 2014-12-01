@@ -4,6 +4,7 @@ if (Meteor.isServer) {
     if (options.profile)
       user.profile = options.profile;
     user.cleaning_time = options.cleaning_time;
+    user.week_start = options.week_start;
     user.household = options.household || new Meteor.Collection.ObjectID()._str;
     return user;
   });
