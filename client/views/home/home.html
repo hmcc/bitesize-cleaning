@@ -1,0 +1,9 @@
+<template name="home">
+  <div class="home">
+    <ul class="list-group">
+      {{#each tasks}}
+        <li class="list-group-item">{{> homeItem}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</template>
