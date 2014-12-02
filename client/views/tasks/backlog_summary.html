@@ -1,0 +1,9 @@
+<template name="backlogSummary">
+  <div class="backlog">
+    <ul class="list-group">
+      {{#each backlog}}
+        <li class="list-group-item">{{> backlogSummaryItem}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</template>
