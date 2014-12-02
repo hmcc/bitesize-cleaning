@@ -9,7 +9,7 @@ Template.login.events({
           errorHandler.showError(template, error);
           Router.go('login');
         } else {
-          Router.go('backlogList');
+          Router.go('/');
         }
       }
     );
