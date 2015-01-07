@@ -1,9 +1,9 @@
 <template name="backlogSummary">
   <div class="backlog">
-    <ul class="list-group">
+    <select multiple id="backlog-tasks" class="form-control select-list">
       {{#each backlog}}
-        <li class="list-group-item">{{> backlogSummaryItem}}</li>
+        {{> backlogSummaryOption}}
       {{/each}}
-    </ul>
+    </select>
   </div>
 </template>

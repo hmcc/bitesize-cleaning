@@ -34,6 +34,7 @@
   border-top-right-radius: 0;
 }
 
-.list-group-item span {
+.list-group-item span,
+.select-list span {
   margin-left: 0.5em;
 }
