@@ -1,10 +1,3 @@
-Meteor.publish('backlog', function() {
-  if (this.userId) {
-    return Backlog.find();
-  } else {
-    this.ready();
-  }
-});
 Meteor.publish('tasks', function() {
   if (access.isLoggedIn(this.userId)) {
     return Tasks.find();
