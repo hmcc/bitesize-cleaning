@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" ng-app="agileCleaningApp">
+<head>
+  <meta charset="utf-8">
+  <title>Agile Cleaning</title>
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="css/application.css">
+
+  <script src="../bower_components/angular/angular.js"></script>
+  <script src="../bower_components/moment/moment.js"></script>
+  <script src="../bower_components/angular-moment/angular-moment.js"></script>
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+</head>
+<body ng-controller="TaskListCtrl">
+  <div class="container">
+    <div class="home">
+      <h2>Chores for {{today}}</h2>
+      <ul class="list-group">
+        <li ng-repeat="task in tasks" class="list-group-item">
+          <a href="#">{{task.title}}</a><span>{{task.time}} minutes</span> <span>{{task.user}}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
