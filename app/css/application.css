@@ -1,0 +1,8 @@
+body {
+  padding-top: 20px;
+}
+
+.list-group-item span,
+.select-list span {
+  margin-left: 0.5em;
+}

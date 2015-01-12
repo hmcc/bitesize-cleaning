@@ -1,0 +1,8 @@
+<div class="home">
+  <h2>Chores for {{today}}</h2>
+  <ul class="list-group">
+    <li ng-repeat="task in tasks" class="list-group-item">
+      <a href="#">{{task.title}}</a><span>{{task.time}} minutes</span> <span>{{task.user}}</span>
+    </li>
+  </ul>
+</div>
