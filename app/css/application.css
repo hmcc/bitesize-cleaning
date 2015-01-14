@@ -6,3 +6,8 @@ body {
 .select-list span {
   margin-left: 0.5em;
 }
+
+.list-group-item span.fixed-width-sm,
+.select-list span.fixed-width-sm{
+  width: 10em;
+}

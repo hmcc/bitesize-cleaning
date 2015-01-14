@@ -1,8 +1,8 @@
 <div class="home">
-  <h2>Chores for {{today}}</h2>
-  <ul class="list-group">
-    <li ng-repeat="task in tasks" class="list-group-item">
-      <a href="#">{{task.title}}</a><span>{{task.time}} minutes</span> <span>{{task.user}}</span>
-    </li>
+  <h2>Chores for w/c {{weekStart}}</h2>
+  <div class="row" ng-repeat="task in tasks">
+      <div class="col-sm-4 col-md-2"><strong>{{task.date}}</strong></div>
+      <div class="col-sm-8 col-md-10"><a href="#">{{task.title}}</a><span ng-if="task.description">: {{task.description}}</span><span class="pull-right">{{task.time}} minutes</span></div>
+  </div>
   </ul>
 </div>
