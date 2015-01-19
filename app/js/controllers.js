@@ -13,6 +13,7 @@ appControllers.controller('NavCtrl', ['$scope', '$location', function($scope, $l
 
 appControllers.controller('TaskListCtrl', ['$scope', '$http', 'moment', function($scope, $http, moment) {
   var today = moment();
+  var dateFormat = 'dddd D MMM';
   
   $http.get('data/tasks.json').success(function(tasks) {
     $scope.tasks = new Array();
@@ -50,7 +51,7 @@ appControllers.controller('TaskListCtrl', ['$scope', '$http', 'moment', function
 
     // Format the dates
     $scope.tasks.map(function(val) {
-      val.date = val.date.format('dddd D MMM');
+      val.date = val.date.format(dateFormat);
     });
   });
 
@@ -65,7 +66,9 @@ appControllers.controller('TaskListCtrl', ['$scope', '$http', 'moment', function
   $scope.weekStart = $scope.weekStart.format('Do MMMM YYYY');
   
   $scope.isToday = function (taskDate) {
-    var ret = today.day() === moment(taskDate).day();
+    var todayDay = today.day();
+    var taskDateMoment = moment(taskDate, dateFormat);
+    var ret = today.day() === taskDateMoment.day();
     return ret;
   };
 }]);
