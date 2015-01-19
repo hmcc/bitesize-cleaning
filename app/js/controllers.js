@@ -63,6 +63,11 @@ appControllers.controller('TaskListCtrl', ['$scope', '$http', 'moment', function
   else 
     $scope.weekStart.day(1)
   $scope.weekStart = $scope.weekStart.format('Do MMMM YYYY');
+  
+  $scope.isToday = function (taskDate) {
+    var ret = today.day() === moment(taskDate).day();
+    return ret;
+  };
 }]);
 
 appControllers.controller('BacklogCtrl', ['$scope', '$http', function($scope, $http) {

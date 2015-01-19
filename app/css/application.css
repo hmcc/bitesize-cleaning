@@ -11,3 +11,15 @@ body {
 .select-list span.fixed-width-sm{
   width: 10em;
 }
+
+.selected {
+  background-color: #f8f8f8;
+}
+
+:not(.selected) + .selected {
+  border-top: 1px solid #e7e7e7;
+}
+
+.selected + :not(.selected) {
+  border-top: 1px solid #e7e7e7;
+}
