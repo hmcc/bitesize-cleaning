@@ -1,9 +1,9 @@
 {
   "version": "0.0.0",
   "private": true,
-  "name": "agile-cleaning",
+  "name": "bitesize-cleaning",
   "description": "",
-  "repository": "https://github.com/hmcc/agile-cleaning",
+  "repository": "https://github.com/hmcc/bitesize-cleaning",
   "license": "MIT",
   "devDependencies": {
     "http-server": "^0.6.1",

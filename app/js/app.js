@@ -2,13 +2,13 @@
 
 /* App Module */
 
-var agileCleaningApp = angular.module('agileCleaningApp', [
+var bitesizeCleaningApp = angular.module('bitesizeCleaningApp', [
   'angularMoment',
   'ngRoute',
   'appControllers'
 ]);
 
-agileCleaningApp.config(['$routeProvider', function($routeProvider) {
+bitesizeCleaningApp.config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/', {
     templateUrl: 'partials/home.html',
     controller: 'TaskListCtrl'
